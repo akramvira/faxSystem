@@ -39,7 +39,7 @@ app.use(express.json());
   app.post("/login", (req, res, next) => {
     
     console.log('login', req.body);
-    if (req.body.data.['username'] === "admin" && req.body.datapassword === "123456") {
+    if (req.body.data['username'] === "admin" && req.body.datapassword === "123456") {
       res.status(200);
       res.json({
         data: { token: "ADMINTOKENNODEJS" }
