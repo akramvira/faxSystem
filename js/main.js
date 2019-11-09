@@ -39,10 +39,11 @@ function sendRequest(options) {
             'X-CSRF-TOKEN': jq('meta[name="csrf-token"]').attr('content')
         },
         success: function (data) {
-            if (typeof  options.callback == 'function')options.callback(data.responseJSON);
+            if (typeof  options.callback == 'function')
+            options.callback(data);
         },
         complete: function (data) {
-            if (typeof  options.callback == 'function')options.callback(data.responseJSON);
+           // if (typeof  options.callback == 'function')options.callback(data.responseJSON);
            // doAfterAjax();
         },
         error: function (data) {
