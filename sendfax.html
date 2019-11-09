@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SendFax</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="style/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="style/css/vazir.css">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+<body>
+<nav class="navbar sticky-top bg-white navbar-expand-md navbar-light p-0">
+    <div class="d-flex align-items-center">
+        <a href="#" class="navbar-brand bg-light py-3 px-5 m-0 h3">پنل مدیریت فکس ویرا</a>
+        <span class="oi oi-menu mr-4" data-toggle="collapse" data-target="#sidebar"></span>
+    </div>
+    <div class="collapse navbar-collapse">
+        <div class="ml-3 mr-auto">
+            <button type="button" class="btn btn-sm btn-primary">
+                فکس ‌های جدید <span class="badge badge-warning">9</span>
+            </button>
+            <button class="btn btn-sm btn-danger">خروج</button>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+           <div class="row">
+               <div class="col-12 col-md-2 bg-dark text-light collapse show" id="sidebar">
+                   <ul class="nav flex-column px-3">
+                       <li class="nav-item d-flex align-items-center">
+                           <span class="oi oi-dashboard"></span>
+                           <a href="#" class="nav-link my-1">داشبورد</a>
+                       </li>
+                       <li class="nav-item d-flex align-items-center">
+                           <span class="oi oi-comment-square"></span>
+                           <a href="#" class="nav-link my-1">ارسال فکس </a>
+                       </li>
+                       <li class="nav-item">
+                           <div class="d-flex align-items-center">
+                               <span class="oi oi-book"></span>
+                               <a href="#" class="nav-link my-1 w-100 collapsed" data-toggle="collapse" data-target="#submenu1">
+                                   فکس
+                                   <span class="oi oi-chevron-left float-left"></span>
+                               </a>
+                           </div>
+                           <div class="collapse" id="submenu1">
+                               <ul class="nav px-3">
+                                   <li class="nav-item">
+                                       <a href="#" class="nav-link my-1">صندوق ورودی </a>
+                                   </li>
+                                   <li class="nav-item w-100">
+                                       <a href="#" class="nav-link my-1">صندوق خروجی</a>
+                                   </li>
+                                   <li class="nav-item">
+                                       <a href="#" class="nav-link my-1">بایگانی </a>
+                                   </li>
+                               </ul>
+                           </div>
+                       </li>
+                   </ul>
+                   <ul class="nav flex-column px-3">
+                       <li class="nav-item d-flex align-items-center">
+                           <span class="oi oi-person"></span>
+                           <a href="#" class="nav-link my-1">کاربران</a>
+                       </li>
+                       <li class="nav-item d-flex align-items-center">
+                           <span class="oi oi-video"></span>
+                           <a href="#" class="nav-link my-1">تنظیمات</a>
+                       </li>
+                   </ul>
+               </div>
+               <div class="col-12 col-md-10 bg-light mr-md-auto p-4" id="main">
+                  <div class="col-12 col-md-9 bg-transparent">
+                      <nav class="navbar navbar-expand-md navbar-light bg-light">
+                          <span class="oi oi-book"></span>
+                          <a class="navbar-brand" href="#">ارسال فکس </a>
+                      </nav>
+                      <div class="row form-group my-5">
+                          <div class="col-md-3">
+                              <input type="text" class="form-control" id="DestinationNumber" placeholder="شماره مقصد">
+                          </div>
+                          <div class="col-md-3">
+                              <input type="text" class="form-control" id="ExtentionNumber" placeholder="شماره داخلی">
+                          </div>
+                          <div class="col-md-3">
+                              <input type="text" class="form-control" id="Palse" placeholder="وقفه / ثانیه">
+                          </div>
+                      </div>
+                      <div class="col-md-9 form-group custom-file">
+                          <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                          <label class="custom-file-label" for="validatedCustomFile">لطفا فایل موردنظر را انتخاب کنید  ...</label>
+                          <div class="invalid-feedback">Example invalid custom file feedback</div>
+                      </div>
+                      <div class="col-md-6 my-5">
+                          <div class="custom-control custom-switch">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                              <label class="custom-control-label" for="customSwitch1">اگر فایلتان افقی هست این گزینه را فعال کنید !</label>
+                          </div>
+                      </div>
+                      <div class="col-md-9">
+                          <div class="input-group mb-3">
+                              <select class="custom-select" id="inputGroupSelect02">
+                                  <option selected>لطفا داخلی خود را انتخاب نمایید...</option>
+                                  <option value="1">100</option>
+                                  <option value="2">101</option>
+                                  <option value="3">102</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-10 my-5 form-inline">
+                          <div class="col-md-6">
+                              <button type="submit" class="btn btn-success mb-2">رسال فکس </button>
+                          </div>
+                          <div class="col-md-6">
+                              <button type="submit" class="btn btn-danger mb-2">پاک کردن</button>
+                          </div>
+                      </div>
+                  </div>
+               </div>
+
+           </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
+
