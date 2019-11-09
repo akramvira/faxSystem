@@ -1,19 +1,16 @@
 jq(function() {
+  sendRequest({
+    url: "/extesions",
+    callback: function(data) {
+      var options = "";
+      var extesions = data["data"]["extesions"];
+      for (var i = 0; i < extesions.length; i++) {
+        options += `<option value=${extesions[i]}>${extesions[i]}</option>`;
+      }
 
-    sendRequest({
-        url:'/extesions',
-        callback: function(data){
-
-            var options = '';
-            var extesions  = data['data']['extesions'];
-            for(var i = 0 ; i< extesions.length; i++){
-                options +=`<option value=${extesions[i]}>${extesions[i]}</option>` ;
-            }
-
-
-            jq('#extensions').append(options);
-        }
-    });
+      jq("#extensions").append(options);
+    }
+  });
 
   jq("#addRow").on("click", function() {
     var row = `
@@ -71,34 +68,32 @@ jq(function() {
 
     var file = jq("#validatedCustomFile")[0].files[0];
 
-    if (!file || !(
-      file.type == "application/pdf" ||
-      file.type == "image/jpeg" ||
-      file.type == "image/png" ||
-      file.type == "image/tiff" ||
-      file.type == "image/jpg"
-    ))
-    {
-        alert('file is not ok');
-        return;
-        // jq('#file-error').text('فرمت فایل صحیح نیست.');
-        // setTimeout(() => {
-        //     jq('#file-error').text('');
-        // }, 3000);
+    if (
+      !file ||
+      !(
+        file.type == "application/pdf" ||
+        file.type == "image/jpeg" ||
+        file.type == "image/png" ||
+        file.type == "image/tiff" ||
+        file.type == "image/jpg"
+      )
+    ) {
+      alert("file is not ok");
+      return;
+      // jq('#file-error').text('فرمت فایل صحیح نیست.');
+      // setTimeout(() => {
+      //     jq('#file-error').text('');
+      // }, 3000);
     }
 
+    let isVertical = jq("#isVertical").prop("checked");
 
+    let extension = jq("#extensions").val();
 
-
-    let isVertical = jq('#isVertical').prop('checked');
-    
-    let extension = jq('#extensions').val();
-
-    if(extension == '0'){
-        alert('select and extension');
-        return;
+    if (extension == "0") {
+      alert("select and extension");
+      return;
     }
-
 
     var formData = new FormData();
 
@@ -115,7 +110,7 @@ jq(function() {
       //     'X-CSRF-TOKEN':  localStorage.getItem('token')
       // },
       success: function(data) {
-        alert('fax sent successfully');
+        alert("fax sent successfully");
       },
       complete: function(data) {
         // if (typeof  options.callback == 'function')options.callback(data.responseJSON);
@@ -131,5 +126,43 @@ jq(function() {
     });
   });
 
+  jq("#clearForm").on("click", function() {
 
+    jq("#isVertical").prop("checked", false);
+
+    jq("#extentions").val("0");
+    
+    jq("#receivers").html(`
+    <div class="row form-group  receiver">
+    <div class="col-3 ">
+      <input
+        type="text"
+        class="form-control number"
+        id="DestinationNumber"
+        placeholder="شماره مقصد"
+      />
+    </div>
+    <div class="col-3">
+      <input
+        type="text"
+        class="form-control extension"
+        id="ExtentionNumber"
+        placeholder="شماره داخلی"
+      />
+    </div>
+    <div class="col-3">
+      <input
+        type="text"
+        class="form-control delay"
+        id="Palse"
+        placeholder="وقفه / ثانیه"
+      />
+    </div>
+  </div>
+    `);
+
+
+    jq('#file').val('');
+
+  });
 });
