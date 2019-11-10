@@ -1,16 +1,16 @@
-// jq(function() {
-//   sendRequest({
-//     url: "/extesions",
-//     callback: function(data) {
-//       var options = "";
-//       var extesions = data["data"]["extesions"];
-//       for (var i = 0; i < extesions.length; i++) {
-//         options += `<option value=${extesions[i]}>${extesions[i]}</option>`;
-//       }
-//
-//       jq("#extensions").append(options);
-//     }
-//   });
+jq(function() {
+  sendRequest({
+    url: "/extesions",
+    callback: function(data) {
+      var options = "";
+      var extesions = data["data"]["extesions"];
+      for (var i = 0; i < extesions.length; i++) {
+        options += `<option value=${extesions[i]}>${extesions[i]}</option>`;
+      }
+
+      jq("#extensions").append(options);
+    }
+  });
 
   jq("#addRow").on("click", function() {
     var row = `
@@ -88,19 +88,19 @@
 
     let isVertical = jq("#isVertical").prop("checked");
 
-    // let extension = jq("#extensions").val();
-    //
-    // if (extension == "0") {
-    //   alert("select and extension");
-    //   return;
-    // }
+    let extension = jq("#extensions").val();
+
+    if (extension == "0") {
+      alert("select and extension");
+      return;
+    }
 
     var formData = new FormData();
 
     formData.append("file", file);
     formData.append("receivers", receivers);
     formData.append("isVertical", isVertical);
-    // formData.append("extension", extension);
+    formData.append("extension", extension);
 
     jq.ajax({
       type: "POST",
@@ -130,7 +130,7 @@
 
     jq("#isVertical").prop("checked", false);
 
-    // jq("#extentions").val("0");
+    jq("#extentions").val("0");
     
     jq("#receivers").html(`
     <div class="row form-group  receiver">

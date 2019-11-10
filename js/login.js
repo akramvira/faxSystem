@@ -59,7 +59,7 @@ function login(options) {
             // }
             // else if(error.status == 406){
 
-                jq('#error').text('نام یا نام کاربری غلط است.');
+                jq('#error').text('نام یا نام کاربری غلط است.');;
                 clearError();
             //}
         }
