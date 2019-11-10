@@ -65,7 +65,7 @@
     "sass-lint": "^1.10.2",
     "sync-pkg": "^0.7.2",
     "webpack": "^2.3.3",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^3.1.11"
   },
   "homepage": "http://babakhani.github.io/PersianWebToolkit/docs/datepicker",
   "keywords": [
