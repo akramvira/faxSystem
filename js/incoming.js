@@ -60,9 +60,31 @@ function archiveItem(itemId) {}
 function deleteItem(itemId) {}
 
 function loadDatepickers() {
-  jq("#date1, #date2").persianDatepicker({
+  jq("#date1").persianDatepicker({
     formatDate: "YYYY/MM/DD",
     altFormat: "YY/MM/DD",
+    altField : '#date1-alt',
+    calendarType: "persian",
+    toolbox: {
+      calendarSwitch: {
+        enabled: true
+      }
+    },
+    navigator: {
+      scroll: {
+        enabled: false
+      }
+    },
+
+    onSelect: function(date) {
+        console.log('time selecter')
+    }
+  });
+
+  jq("#date2").persianDatepicker({
+    formatDate: "YYYY/MM/DD",
+    altFormat: "YY/MM/DD",
+    altField : '#date2-alt',
     calendarType: "persian",
     toolbox: {
       calendarSwitch: {
