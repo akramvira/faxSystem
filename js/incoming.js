@@ -17,10 +17,10 @@ function getFaxes() {
                 {
                     ...data[i],
                     action:`<div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-sm btn-primary">مشاهده</button>
-                            <button type="button" class="btn btn-sm btn-warning">بایگانی</button>
-                            <button type="button" class="btn btn-sm btn-danger">حذف</button>
-                        </div>`})
+                                <button type="button" class="btn btn-sm btn-primary" onclick="viewItem(${data[i]['id']})">مشاهده</button>
+                                <button type="button" class="btn btn-sm btn-warning"  onclick="archiveItem(${data[i]['id']})">بایگانی</button>
+                                <button type="button" class="btn btn-sm btn-danger"  onclick="deleteItem(${data[i]['id']})">حذف</button>
+                            </div>`})
         }
 
         jq('#table').DataTable({
@@ -48,3 +48,7 @@ function getFaxes() {
   }
 
 
+
+  function viewItem(itemId){}
+  function archiveItem(itemId){}
+  function deleteItem(itemId){}
