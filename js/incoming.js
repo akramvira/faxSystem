@@ -10,41 +10,21 @@ function getFaxes() {
       url: "/fax/inbox",
       callback: function(data) {
         
+        let arrayData = [];
 
-        data = [{
-            comments: "RECV  to modem ttyI117",
-            created_at: "2019-11-10 12:22:56",
-            dst: 117,
-            file: "recvq/fax000000001.tif",
-            id: 14,
-            ntries: 0,
-            src: 118,
-            state: 0,
-            style: null,
-            timesend: "1568210940",
-            type: 2,
-            updated_at: "2019-11-10 12:22:56",
-            user_id: 2,
-            visible: 1,
-        },
-        {
-            comments: "RECV  to modem ttyI117",
-            created_at: "2019-11-10 12:22:56",
-            dst: 117,
-            file: "recvq/fax000000001.tif",
-            id: 14,
-            ntries: 0,
-            src: 118,
-            state: 0,
-            style: null,
-            timesend: "1568210940",
-            type: 2,
-            updated_at: "2019-11-10 12:22:56",
-            user_id: 2,
-            visible: 1,
-        }]
+        for(var i in data){
+            arrayData.push(
+                {
+                    ...data[i],
+                    action:`<div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-sm btn-primary">مشاهده</button>
+                            <button type="button" class="btn btn-sm btn-warning">بایگانی</button>
+                            <button type="button" class="btn btn-sm btn-danger">حذف</button>
+                        </div>`})
+        }
+
         jq('#table').DataTable({
-            data : data,
+            data : arrayData,
             columns:[
                 {data: 'id', title:'ردیف'},
                 {data: 'comments',  title:'توضیحات'},
@@ -59,7 +39,8 @@ function getFaxes() {
                 {data: 'type',  title:'نوع'},
                 {data: 'updated_at',  title:'بروزرسانی'},
                 {data: 'user_id',  title:' کاربر'},
-                {data: 'visible', title:'فعال؟'}
+                {data: 'visible', title:'فعال؟'},
+                {data: 'action', title:'عملیات'}
             ]
         });
       }
