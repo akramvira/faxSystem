@@ -104,89 +104,100 @@
           </ul>
         </div>
         <div class="col-md-10 bg-light mr-md-auto p-4" id="main">
-      
-            <div class="row align-items-center justify-content-center">
-              <div class="col-11 card bg-light">
-                <div class="card-header row">
-                  <h5>خلاصه وضعیت</h5>
-                </div>
-                <div class="card-body">
-                  <div class="card-deck row">
-                    <div class="col-2 card text-white bg-primary mb-3">
-                      <div class="card-header row">
-                        <h4 id="receive-count text-center">0</h4>
-                        <p class="card-text blockquote-footer text-white">
-                          تعداد فکس های دریافتی
-                        </p>
-                      </div>
-                      <div class="card-body text-center">
-                            <span style="font-size: 33px">
-                                <i class="oi oi-spreadsheet" ></i>
-                                <i class="oi oi-arrow-thick-bottom"></i>
-                             </span>
-                          </div>
+          <div class="row align-items-center justify-content-center">
+            <div class="col-11 card bg-light">
+              <div class="card-header row">
+                <h5>خلاصه وضعیت</h5>
+              </div>
+              <div class="card-body">
+                <div class="card-deck row">
+                  <div class="col-2 card text-white bg-primary mb-3">
+                    <div class="card-header row">
+                      <h4 id="receive-count text-center">0</h4>
+                      <p class="card-text blockquote-footer text-white">
+                        تعداد فکس های دریافتی
+                      </p>
                     </div>
-                    <div class="col-2 card text-white bg-success mb-3">
-                      <div class="card-header row">
-                        <h4 id="sent-count">0</h4>
-                        <p class="card-text blockquote-footer text-white">
-                          تعداد فکس های ارسالی
-                          <br />
-                          <br />
-                        </p>
-                      </div>
-                      <div class="card-body text-center">
-                            <span style="font-size: 33px">
-                                <i class="oi oi-spreadsheet" ></i>
-                                <i class="oi oi-arrow-thick-top"></i>
-                             </span>
-                          </div>
+                    <div class="card-body text-center">
+                      <span style="font-size: 33px">
+                        <i class="oi oi-spreadsheet"></i>
+                        <i class="oi oi-arrow-thick-bottom"></i>
+                      </span>
                     </div>
-                    <div class="col-2 card text-white bg-warning mb-3">
-                      <div class="card-header row">
-                        <h4 id="archive-count">0</h4>
-                        <p class="card-text blockquote-footer text-white">
-                          تعداد فکس های بایگانی شده
-                        </p>
-                      </div>
-                      <div class="card-body text-center">
-                        <span style="font-size: 33px">
-                            <i class="oi oi-spreadsheet" ></i>
-                            <i class="oi oi-bookmark"></i>
-                         </span>
-                      </div>
+                  </div>
+                  <div class="col-2 card text-white bg-success mb-3">
+                    <div class="card-header row">
+                      <h4 id="sent-count">0</h4>
+                      <p class="card-text blockquote-footer text-white">
+                        تعداد فکس های ارسالی
+                        <br />
+                        <br />
+                      </p>
                     </div>
+                    <div class="card-body text-center">
+                      <span style="font-size: 33px">
+                        <i class="oi oi-spreadsheet"></i>
+                        <i class="oi oi-arrow-thick-top"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-2 card text-white bg-warning mb-3">
+                    <div class="card-header row">
+                      <h4 id="archive-count">0</h4>
+                      <p class="card-text blockquote-footer text-white">
+                        تعداد فکس های بایگانی شده
+                      </p>
+                    </div>
+                    <div class="card-body text-center">
+                      <span style="font-size: 33px">
+                        <i class="oi oi-spreadsheet"></i>
+                        <i class="oi oi-bookmark"></i>
+                      </span>
+                    </div>
+                  </div>
 
-                    <div class="col-5 card">
-                        <div class="row">
-                            <canvas id="pieChart" ></canvas>
-                        </div>
-                    
+                  <div class="col-5 card">
+                    <div class="row">
+                      <canvas id="pieChart"></canvas>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-11 col-md-5 m-auto"></div>
             </div>
-            <div class="row mt-4 align-items-center justify-content-center">
-              <div class="card my-1 col-11 bg-light">
-                <div class="card-header row">
-                  <h4 class="h5">فکس های آنلاین</h4>
-                </div>
-                <div class="card-body">
-                  <div class="card border-secondary mb-1">
-                    <div class="card-header bg-light border-secondary">
-                      فکس های ارسالی
+            <div class="col-11 col-md-5 m-auto"></div>
+          </div>
+          <div class="row mt-4 align-items-center justify-content-center">
+            <div class="card my-1 col-11 bg-light">
+              <div class="card-header row">
+                <h4 class="h5">فکس های آنلاین</h4>
+              </div>
+              <div class="card-body row">
+                <div class="col-6">
+                  <div class=" card border-danger mb-1" id="sending-file">
+                    <div class="card-header bg-light border-danger">
+                   فکس های در حال ارسال
                     </div>
-                    <div class="card-body text-white btn-secondary">
-                      <h5 class="card-title">Success card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                      </p>
+                    <div class="card-body text-white btn-danger files">
+                      
                     </div>
                     <div class="card-footer bg-light border-secondary">
-                      Footer
+                            <span> تعداد فکس های در حال دریافت</span><span class="ml-3 mr-3 font-weight-bold count"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="card border-info mb-1" id="recieving-file">
+                    <div class="card-header bg-light border-secondary">
+                    فکس های در حال دریافت
+                    </div>
+                    <div class="card-body text-white btn-info">
+                      <h5 class="card-title" >نام فایل یک</h5>
+                      <p class="card-text name" >
+                        
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light border-info">
+                      <span> تعداد فکس های در حال دریافت</span><span class="ml-3 mr-3 font-weight-bold count"></span>
                     </div>
                   </div>
                 </div>
@@ -194,6 +205,7 @@
             </div>
           </div>
         </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
