@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <nav class="navbar sticky-top bg-white navbar-expand-md navbar-light p-0">
+    <nav class="navbar sticky-top bg-white navbar-expand-md navbar-light p-0" id="mainNav">
         <div class="d-flex align-items-center">
             <a href="#" class="navbar-brand bg-light py-3 px-5 m-0 h3">پنل مدیریت فکس ویرا</a>
             <span class="oi oi-menu mr-4" data-toggle="collapse" data-target="#sidebar"></span>
@@ -53,13 +53,13 @@
                         <div class="collapse" id="submenu1">
                             <ul class="nav px-3">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link my-1">صندوق ورودی </a>
+                                    <a href="incomingFax.html" class="nav-link my-1">صندوق ورودی </a>
                                 </li>
                                 <li class="nav-item w-100">
-                                    <a href="#" class="nav-link my-1">صندوق خروجی</a>
+                                    <a href="outcomingFax.html" class="nav-link my-1">صندوق خروجی</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link my-1">بایگانی </a>
+                                    <a href="savedFax.html" class="nav-link my-1">بایگانی </a>
                                 </li>
                             </ul>
                         </div>
@@ -83,25 +83,25 @@
                     </div>
                     <div class="card-body">
                         <div class="card-deck">
-                            <div class="card text-white bg-success mb-3">
-                                <div class="card-header">
+                            <div class="card text-white bg-success mb-3" style="max-height: 150px"; >
+                                <div class="card-body">
                                     <h4>150</h4>
                                     <p class="card-text blockquote-footer text-white">تعداد کل فکس ها </p>
                                 </div>
                             </div>
-                            <div class="card text-white bg-primary mb-3">
+                            <div class="card text-white bg-primary mb-3" style="max-height: 150px";>
                                 <div class="card-header">
                                     <h4>35</h4>
                                     <p class="card-text blockquote-footer text-white">تعداد فکس های دریافتی </p>
                                 </div>
                             </div>
-                            <div class="card text-white bg-warning mb-3">
+                            <div class="card text-white bg-warning mb-3" style="max-height: 150px";>
                                 <div class="card-header">
                                     <h4>55</h4>
                                     <p class="card-text blockquote-footer text-white">تعداد فکس های ارسالی </p>
                                 </div>
                             </div>
-                            <div class="card text-white bg-dark mb-3">
+                            <div class="card text-white bg-dark mb-3" >
                                 <div class="card-header">
                                     <h4>90</h4>
                                     <p class="card-text blockquote-footer text-white">تعداد فکس های بایگانی شده</p>
@@ -145,55 +145,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap border-bottom pb-2 my-4">
-                    <h1 class="h2">آخرین فکس ها </h1>
-                </div>
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr class="table-secondary">
-                                <th>عنوان فکس</th>
-                                <th>شماره فکس</th>
-                                <th>تاریخ فکس</th>
-                                <th>تنظیمات</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>فکس ارسالی شماره1 !</td>
-                                <td>0</td>
-                                <td>30</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-sm btn-primary">مشاهده</button>
-                                        <button type="button" class="btn btn-sm btn-danger">حذف</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>فکس دریافتی شماره1 !</td>
-                                <td>0</td>
-                                <td>30</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-sm btn-primary">مشاهده</button>
-                                        <button type="button" class="btn btn-sm btn-danger">حذف</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>فکس بایگانی شده شماره1 !</td>
-                                <td>0</td>
-                                <td>30</td>
-                                <td>
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-sm btn-primary">مشاهده</button>
-                                        <button type="button" class="btn btn-sm btn-danger">حذف</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card my-1">
+                    <div class="card-header">
+                        <h4>فکس های آنلاین </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="card border-secondary mb-3" style="max-width: 35rem;">
+                                <div class="card-header bg-light border-secondary">فکس های ورودی</div>
+                                <div class="card-body text-white bg-info">
+                                    <h5 class="card-title">Success card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div class="card-footer bg-light border-secondary">Footer</div>
+                            </div>
+                            <div class="card border-success mb-3" style="max-width: 35rem;">
+                                <div class="card-header bg-light border-success">فکس های ارسالی</div>
+                                <div class="card-body text-white bg-info">
+                                    <h5 class="card-title">Success card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div class="card-footer bg-light border-success">Footer</div>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
