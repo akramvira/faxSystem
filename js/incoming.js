@@ -76,4 +76,24 @@ function loadDatepickers() {
         console.log('time selecter')
     }
   });
+  jq("#date2").persianDatepicker({
+    
+    altField: "#right-dateAlt",
+    altFormat: "YY/MM/DD",
+    calendarType: "persian",
+    toolbox: {
+      calendarSwitch: {
+        enabled: true
+      }
+    },
+    navigator: {
+      scroll: {
+        enabled: false
+      }
+    },
+
+    onSelect: function(date) {
+        console.log('time selecter')
+    }
+  });
 }
