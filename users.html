@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="style/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="style/css/vazir.css">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+<body>
+<nav class="navbar sticky-top bg-white navbar-expand-md navbar-light p-0">
+    <div class="d-flex align-items-center">
+        <a href="#" class="navbar-brand bg-light py-3 px-5 m-0 h3">پنل مدیریت فکس ویرا</a>
+        <span class="oi oi-menu mr-4" data-toggle="collapse" data-target="#sidebar"></span>
+    </div>
+    <div class="collapse navbar-collapse">
+        <div class="ml-3 mr-auto">
+            <button type="button" class="btn btn-sm btn-success">
+                <span class="badge badge-light"> + </span>                      ارسال فکس
+            </button>
+            <button type="button" class="btn btn-sm btn-primary">
+                فکس ‌های جدید <span class="badge badge-light">9</span>
+            </button>
+            <button class="btn btn-sm btn-secondary">پروفایل</button>
+            <button class="btn btn-sm btn-danger">خروج</button>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-2 bg-dark text-light collapse show" id="sidebar">
+            <ul class="nav flex-column px-3">
+                <li class="nav-item d-flex align-items-center">
+                    <span class="oi oi-dashboard"></span>
+                    <a href="index.html" class="nav-link my-1">داشبورد</a>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                    <span class="oi oi-comment-square"></span>
+                    <a href="sendfax.html" class="nav-link my-1">ارسال فکس </a>
+                </li>
+                <li class="nav-item">
+                    <div class="d-flex align-items-center">
+                        <span class="oi oi-book"></span>
+                        <a href="#" class="nav-link my-1 w-100 collapsed" data-toggle="collapse" data-target="#submenu1">
+                            فکس
+                            <span class="oi oi-chevron-left float-left"></span>
+                        </a>
+                    </div>
+                    <div class="collapse" id="submenu1">
+                        <ul class="nav px-3">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link my-1">صندوق ورودی </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a href="outcomingFax.html" class="nav-link my-1">صندوق خروجی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="savedFax.html" class="nav-link my-1">بایگانی </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav flex-column px-3">
+                <li class="nav-item d-flex align-items-center">
+                    <span class="oi oi-person"></span>
+                    <a href="#" class="nav-link my-1">کاربران</a>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                    <span class="oi oi-video"></span>
+                    <a href="#" class="nav-link my-1">تنظیمات</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-10 bg-light mr-md-auto p-4" id="main">
+            <div class="d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap border-bottom pb-2 my-1">
+                <nav class="navbar navbar-expand-md navbar-light bg-light">
+                    <span class="oi oi-person"></span>
+                    <a class="navbar-brand" href="#">مدیریت کاربران </a>
+                </nav>
+                <button class="btn btn-success btn-sm mx-5"> اضافه کردن کاربر جدید </button>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr class="table-secondary">
+                        <th>نام و نام خانوادگی</th>
+                        <th>تلفن</th>
+                        <th>ایمیل</th>
+                        <th>ایمیل</th>
+                        <th>تاریخ ثبت</th>
+                        <th>آخرین تغییرات</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>کاربر شماره 1 !</td>
+                        <td>0</td>
+                        <td>30</td>
+                        <td>
+                            ok
+                        </td>
+                        <td>
+                            موفق
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-sm btn-warning">ویرایش</button>
+                                <button type="button" class="btn btn-sm btn-danger">حذف</button>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>کاربر شماره2 !</td>
+                        <td>0</td>
+                        <td>30</td>
+                        <td>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-sm btn-warning">ویرایش</button>
+                                <button type="button" class="btn btn-sm btn-danger">حذف</button>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>کاربر شماره 3 !</td>
+                        <td>0</td>
+                        <td>30</td>
+                        <td>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-sm btn-warning">ویرایش</button>
+                                <button type="button" class="btn btn-sm btn-danger">حذف</button>
+                            </div>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
+
