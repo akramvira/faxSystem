@@ -32,7 +32,7 @@ function updateFaxCount(){
                         <span class="file-from p-1">به:${sendingFiles[i]['to']}</span>
                         <span class="file-from p-1">ntries:${sendingFiles[i]['ntries']}</span>
                         <span class="file-from p-1">state:${sendingFiles[i]['state']}</span>
-                        <span class="file-from p-1">file:${sendingFiles[i]['file']}</span>
+                        <span class="file-from p-1">فایل:${sendingFiles[i]['file']}</span>
                         <span class="file-from p-1">تاریخ:${sendingFiles[i]['date']}</span>
                     </p>
                     `;
