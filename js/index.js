@@ -9,8 +9,14 @@ jq(function(){
 function updateFaxCount(){
     sendRequest(
         {
-            url:'/dashboard-data',
+            url:'/dashboard',
             callback: function(data){
+                
+                jq('#receive-count').text(data['receive']);
+                jq('#sent-count').text(data['send']);
+                jq('#archive-count').text(data['archive']);
+                jq('#all-count').text(data['all']);
+
                 jq('#newFaxCount').text(data['data']);
             }
         }

@@ -1,149 +1,207 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> پنل مدیریت فکس</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/css/bootstrap-rtl.css">
-    <link rel="stylesheet" href="style/css/open-iconic-bootstrap.min.css">    
-    <link rel="stylesheet" href="style/css/vazir.css">
-    <link rel="stylesheet" href="style/css/style.css">
-</head>
-<body>
-
-    <nav class="navbar sticky-top bg-white navbar-expand-md navbar-light p-0" id="mainNav">
-        <div class="d-flex align-items-center">
-            <a href="#" class="navbar-brand bg-light py-3 px-5 m-0 h3">پنل مدیریت فکس ویرا</a>
-            <span class="oi oi-menu mr-4" data-toggle="collapse" data-target="#sidebar"></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>پنل مدیریت فکس</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/css/bootstrap-rtl.css" />
+    <link rel="stylesheet" href="style/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="style/css/vazir.css" />
+    <link rel="stylesheet" href="style/css/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar sticky-top bg-white navbar-expand-md navbar-light p-0"
+      id="mainNav"
+    >
+      <div class="d-flex align-items-center">
+        <a href="#" class="navbar-brand bg-light py-3 px-5 m-0 h3"
+          >پنل مدیریت فکس ویرا</a
+        >
+        <span
+          class="oi oi-menu mr-4"
+          data-toggle="collapse"
+          data-target="#sidebar"
+        ></span>
+      </div>
+      <div class="collapse navbar-collapse">
+        <div class="ml-3 mr-auto">
+          <button type="button" class="btn btn-sm btn-success">
+            <span class="badge badge-light"> + </span> ارسال فکس
+          </button>
+          <button type="button" class="btn btn-sm btn-primary">
+            فکس ‌های جدید
+            <span class="badge badge-light" id="newFaxCount">9</span>
+          </button>
+          <button class="btn btn-sm btn-secondary">پروفایل</button>
+          <button class="btn btn-sm btn-danger">خروج</button>
         </div>
-        <div class="collapse navbar-collapse">
-            <div class="ml-3 mr-auto">
-                <button type="button" class="btn btn-sm btn-success">
-                    <span class="badge badge-light"> + </span>                      ارسال فکس
-                </button>
-                <button type="button" class="btn btn-sm btn-primary">
-                    فکس ‌های جدید <span class="badge badge-light" id="newFaxCount">9</span>
-                </button>
-                <button class="btn btn-sm btn-secondary">پروفایل</button>
-                <button class="btn btn-sm btn-danger">خروج</button>
-            </div>
-        </div>
+      </div>
     </nav>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-2 bg-dark text-light collapse show" id="sidebar">
-                <ul class="nav flex-column px-3">
-                    <li class="nav-item d-flex align-items-center">
-                        <span class="oi oi-dashboard"></span>
-                        <a href="index.html" class="nav-link my-1">داشبورد</a>
-                    </li>
-                    <li class="nav-item d-flex align-items-center">
-                        <span class="oi oi-comment-square"></span>
-                        <a href="sendfax.html" class="nav-link my-1">ارسال فکس </a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="d-flex align-items-center">
-                            <span class="oi oi-book"></span>
-                            <a href="#" class="nav-link my-1 w-100 collapsed" data-toggle="collapse" data-target="#submenu1">
-                                فکس
-                                <span class="oi oi-chevron-left float-left"></span>
-                            </a>
-                        </div>
-                        <div class="collapse" id="submenu1">
-                            <ul class="nav px-3">
-                                <li class="nav-item">
-                                    <a href="incomingFax.html" class="nav-link my-1">صندوق ورودی </a>
-                                </li>
-                                <li class="nav-item w-100">
-                                    <a href="outcomingFax.html" class="nav-link my-1">صندوق خروجی</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="savedFax.html" class="nav-link my-1">بایگانی </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+      <div class="row">
+        <div
+          class="col-12 col-md-2 bg-dark text-light collapse show"
+          id="sidebar"
+        >
+          <ul class="nav flex-column px-3">
+            <li class="nav-item d-flex align-items-center">
+              <span class="oi oi-dashboard"></span>
+              <a href="index.html" class="nav-link my-1">داشبورد</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <span class="oi oi-comment-square"></span>
+              <a href="sendfax.html" class="nav-link my-1">ارسال فکس </a>
+            </li>
+            <li class="nav-item">
+              <div class="d-flex align-items-center">
+                <span class="oi oi-book"></span>
+                <a
+                  href="#"
+                  class="nav-link my-1 w-100 collapsed"
+                  data-toggle="collapse"
+                  data-target="#submenu1"
+                >
+                  فکس
+                  <span class="oi oi-chevron-left float-left"></span>
+                </a>
+              </div>
+              <div class="collapse" id="submenu1">
+                <ul class="nav px-3">
+                  <li class="nav-item">
+                    <a href="incomingFax.html" class="nav-link my-1"
+                      >صندوق ورودی
+                    </a>
+                  </li>
+                  <li class="nav-item w-100">
+                    <a href="outcomingFax.html" class="nav-link my-1"
+                      >صندوق خروجی</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="savedFax.html" class="nav-link my-1">بایگانی </a>
+                  </li>
                 </ul>
-                <ul class="nav flex-column px-3">
-                    <li class="nav-item d-flex align-items-center">
-                        <span class="oi oi-person"></span>
-                        <a href="users.html" class="nav-link my-1">کاربران</a>
-                    </li>
-                    <li class="nav-item d-flex align-items-center">
-                        <span class="oi oi-video"></span>
-                        <a href="#" class="nav-link my-1">تنظیمات</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-10 bg-light mr-md-auto p-4" id="main">
-                <div class="row">
-                    <div class="col-12 col-md-7 card bg-light">
-                        <div class="card-header">
-                            <h5>خلاصه وضعیت </h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-deck">
-                                <div class="card text-white bg-primary mb-3">
-                                    <div class="card-header">
-                                        <h4>35</h4>
-                                        <p class="card-text blockquote-footer text-white">تعداد فکس های دریافتی </p>
-                                    </div>
-                                </div>
-                                <div class="card text-white bg-success mb-3">
-                                    <div class="card-header">
-                                        <h4>55</h4>
-                                        <p class="card-text blockquote-footer text-white">تعداد فکس های ارسالی </p>
-                                    </div>
-                                </div>
-                                <div class="card text-white bg-warning mb-3" >
-                                    <div class="card-header">
-                                        <h4>90</h4>
-                                        <p class="card-text blockquote-footer text-white">تعداد فکس های بایگانی شده</p>
-                                    </div>
-                                    <div class="card-body">
-                                        <canvas id="approve-comment" class="w-100" height="100%"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-12 col-md-5 m-auto">
-                        <canvas id="pieChart"></canvas>
-                    </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav flex-column px-3">
+            <li class="nav-item d-flex align-items-center">
+              <span class="oi oi-person"></span>
+              <a href="users.html" class="nav-link my-1">کاربران</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <span class="oi oi-video"></span>
+              <a href="#" class="nav-link my-1">تنظیمات</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10 bg-light mr-md-auto p-4" id="main">
+      
+            <div class="row align-items-center justify-content-center">
+              <div class="col-11 card bg-light">
+                <div class="card-header row">
+                  <h5>خلاصه وضعیت</h5>
                 </div>
-                <div class="row">
-                    <div class="card my-1 col-12 col-md-12 bg-light">
-                        <div class="card-header">
-                            <h4>فکس های آنلاین </h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="card border-secondary mb-1" >
-                                <div class="card-header bg-light border-secondary">فکس های ارسالی</div>
-                                <div class="card-body text-white btn-secondary">
-                                    <h5 class="card-title">Success card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer bg-light border-secondary">Footer</div>
-                            </div>
-                        </div>
+                <div class="card-body">
+                  <div class="card-deck row">
+                    <div class="col-2 card text-white bg-primary mb-3">
+                      <div class="card-header row">
+                        <h4 id="receive-count text-center">0</h4>
+                        <p class="card-text blockquote-footer text-white">
+                          تعداد فکس های دریافتی
+                        </p>
+                      </div>
+                      <div class="card-body text-center">
+                            <span style="font-size: 33px">
+                                <i class="oi oi-spreadsheet" ></i>
+                                <i class="oi oi-arrow-thick-bottom"></i>
+                             </span>
+                          </div>
+                    </div>
+                    <div class="col-2 card text-white bg-success mb-3">
+                      <div class="card-header row">
+                        <h4 id="sent-count">0</h4>
+                        <p class="card-text blockquote-footer text-white">
+                          تعداد فکس های ارسالی
+                          <br />
+                          <br />
+                        </p>
+                      </div>
+                      <div class="card-body text-center">
+                            <span style="font-size: 33px">
+                                <i class="oi oi-spreadsheet" ></i>
+                                <i class="oi oi-arrow-thick-top"></i>
+                             </span>
+                          </div>
+                    </div>
+                    <div class="col-2 card text-white bg-warning mb-3">
+                      <div class="card-header row">
+                        <h4 id="archive-count">0</h4>
+                        <p class="card-text blockquote-footer text-white">
+                          تعداد فکس های بایگانی شده
+                        </p>
+                      </div>
+                      <div class="card-body text-center">
+                        <span style="font-size: 33px">
+                            <i class="oi oi-spreadsheet" ></i>
+                            <i class="oi oi-bookmark"></i>
+                         </span>
+                      </div>
                     </div>
 
+                    <div class="col-5 card">
+                        <div class="row">
+                            <canvas id="pieChart" ></canvas>
+                        </div>
+                    
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="col-11 col-md-5 m-auto"></div>
             </div>
+            <div class="row mt-4 align-items-center justify-content-center">
+              <div class="card my-1 col-11 bg-light">
+                <div class="card-header row">
+                  <h4 class="h5">فکس های آنلاین</h4>
+                </div>
+                <div class="card-body">
+                  <div class="card border-secondary mb-1">
+                    <div class="card-header bg-light border-secondary">
+                      فکس های ارسالی
+                    </div>
+                    <div class="card-body text-white btn-secondary">
+                      <h5 class="card-title">Success card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light border-secondary">
+                      Footer
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
-</body>
+  </body>
 </html>
