@@ -53,10 +53,10 @@ app.post("/login", (req, res, next) => {
 
 app.get("/dashboard", (req, res, next) => {
   res.json({
-    all: 1,
-    send: 1,
-    receive: 0,
-    archive: 0,
+    all: 30,
+    send: 15,
+    receive: 10,
+    archive: 5,
     new: 0,
     name: "masoud",
     sending: {
@@ -68,7 +68,7 @@ app.get("/dashboard", (req, res, next) => {
           from: 117,
           to: 118,
           state: 7,
-          comments: "",
+          comments: "متن توضیحات فایل",
           ntries: "0",
           file: "docq/doc7.pdf"
         }
