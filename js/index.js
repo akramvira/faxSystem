@@ -1,6 +1,6 @@
 jq(function() {
   updateFaxCount();
-  setInterval(updateFaxCount, 10000);
+  setInterval(updateFaxCount, 50000);
   //setInterval(updateFaxesStatus, 3000);
 });
 
@@ -42,6 +42,9 @@ function updateFaxCount() {
                         <span class="file-from p-1">تاریخ:${
                           sendingFiles[i]["date"]
                         }</span>
+                        <div class="file-from p-1">توضیحات:${
+                            sendingFiles[i]["comments"]
+                          }</div>
                     </p>
                     `;
       }
