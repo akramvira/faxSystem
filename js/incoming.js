@@ -83,13 +83,13 @@ function loadDatepickers() {
 
 function getfilteredData(){
 
-    var date1 =  jq('#date1').val();
+    var date1 =  jq('#date1-alt').val();
     var src1= jq('#src1').val();
     var dst1= jq('#dst1').val();
 
-    var date1 =  jq('#date1').val();
-    var src1= jq('#src1').val();
-    var dst1= jq('#dst1').val();
+    var date2 =  jq('#date2-alt').val();
+    var src2= jq('#src2').val();
+    var dst2= jq('#dst2').val();
 
 debugger;
 
